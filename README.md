@@ -14,7 +14,7 @@ This documentation extends the original documentation with better type declarati
 * [4. Getting translations](#getting-translations)
 * [5. Use the `translate` directive with `lit-html`](#use-the-translate-directive-with-lit-html)
 * [6. Change language](#change-language)
-* [7.0 Interpolate values](#interpolate-values)
+* [7. Interpolate values](#interpolate-values)
     * [#7.1 Interpolate values with HTML strings](#interpolate-values-with-html-strings)
     * [#7.2 Interpolate dynamic values](#interpolate-dynamic-values)
 
