@@ -154,7 +154,7 @@ translateGet("login_page.sign_in"); // "Hello"
 translateGet("login_page.sign_in_intro"); // "World"
 ```
 
-Remember: this will get the translation only **once**. See [Interpolate dynamic values](#interpolate-dynamic-values).
+Remember: this will get the translation only **once**. See [Interpolate dynamic values](#72-interpolate-dynamic-values).
 
 <br>
 
@@ -298,7 +298,7 @@ registerTranslateConfig({
 });
 ```
 
-But remember: `lit-translate`'s `get` function will get the translation only **once**. See [Interpolate dynamic values](#interpolate-dynamic-values).
+But remember: `lit-translate`'s `get` function will get the translation only **once**. See [Interpolate dynamic values](#72-interpolate-dynamic-values).
 
 <br>
 
