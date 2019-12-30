@@ -67,7 +67,7 @@ Install [lit-translate](https://github.com/andreasbm/lit-translate) with `npm i 
 
 ## 2. Setting up lit-translate in TypeScript
 
-Registering the translate config differs from the original documentation. Either way, the best place to configure lit-translate is in your main component. `App.ts` in my case. Place is in lit-elements' [`connectedCallback`](https://lit-element.polymer-project.org/guide/events) lifecycle callback.
+Registering the translate config differs from the original documentation. Either way, the best place to configure lit-translate is in your main component. `App.ts` in my case. Place this in lit-elements' [`connectedCallback`](https://lit-element.polymer-project.org/guide/events) lifecycle callback.
 
 ```ts
 // App.ts
@@ -101,7 +101,7 @@ From the docs:
 
 > Sometimes you want to avoid the empty placeholders being shown initially before any of the translation strings has been loaded. To avoid this issue you might want to defer the first update of the component. Here's an example of what you could do if using `lit-element`.
 
-We're also setting the language here with `use('en')`. Where `'en'` refers to the corresponding JSON file. Also, by using the `langLoaded` property, the component will not be visible until the translation lines have been loaded. If you don't do this, the translation key will be shown instead of the translation: *en* in this case.
+By using the `langLoaded` property, the component will not be visible until the translation lines have been loaded. If you don't do this, the translation key will be shown instead of the translation: *en* in this case.
 
 ```ts
 // App.ts
@@ -154,7 +154,7 @@ translateGet("login_page.sign_in"); // "Hello"
 translateGet("login_page.sign_in_intro"); // "World"
 ```
 
-Remember: this will get the translation only **once**.
+Remember: this will get the translation only **once**. See [Interpolate dynamic values](#interpolate-dynamic-values).
 
 <br>
 
@@ -298,7 +298,7 @@ registerTranslateConfig({
 });
 ```
 
-But remember: `lit-translate`'s `get` function will get the translation only **once**.
+But remember: `lit-translate`'s `get` function will get the translation only **once**. See [Interpolate dynamic values](#interpolate-dynamic-values).
 
 <br>
 
