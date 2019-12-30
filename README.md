@@ -4,7 +4,22 @@ https://github.com/andreasbm/lit-translate
 
 <br>
 
-## Getting started
+## Table of contents
+
+* [1. Getting started](#getting-started)
+* [2. Setting up lit-translate in TypeScript](#setting-up-lit-translate-in-typescript)
+* [3. Wait for strings to be loaded before displaying the component](#wait-for-strings-to-be-loaded-before-displaying-the-component)
+* [4. Getting translations](#getting-translations)
+* [5. Use the `translate` directive with `lit-html`](#use-the-translate-directive-with-lit-html)
+* [6. Change language](#change-language)
+* [7.0 Interpolate values](#interpolate-values)
+    * [#7.1 Interpolate values with HTML strings](#interpolate-values-with-html-strings)
+    * [#7.2 Interpolate dynamic values](#interpolate-dynamic-values)
+
+
+<br>
+
+## 1. Getting started
 
 Install [lit-translate](https://github.com/andreasbm/lit-translate) with `npm i lit-translate` as shown in the docs. And define the translations in JSON format, also shown in the docs.
 
@@ -48,7 +63,7 @@ Install [lit-translate](https://github.com/andreasbm/lit-translate) with `npm i 
 
 <br>
 
-## Setting up lit-translate in TypeScript
+## 2. Setting up lit-translate in TypeScript
 
 Registering the translate config differs from the original documentation. Either way, the best place to configure lit-translate is in your main component. `App.ts` in my case. Place is in lit-elements' [`connectedCallback`](https://lit-element.polymer-project.org/guide/events) lifecycle callback.
 
@@ -78,7 +93,7 @@ export class App extends LitElement {
 
 <br>
 
-## Wait for strings to be loaded before displaying the component
+## 3. Wait for strings to be loaded before displaying the component
 
 From the docs:
 
@@ -125,7 +140,7 @@ export class App extends LitElement {
 
 <br>
 
-## Getting translations
+## 4. Getting translations
 
 To get the translation **once**, use `get`. The original docs say `import { get } from 'lit-translate'`. However, using `get` as function name is not a very smart idea. Simply rename it:
 
@@ -141,7 +156,7 @@ Remember: this will get the translation only **once**.
 
 <br>
 
-## Use the `translate` directive with `lit-html`
+## 5. Use the `translate` directive with `lit-html`
 
 Use the `translate` directive with `lit-html` to automatically refresh the translations when the language is changed.
 
@@ -185,7 +200,7 @@ This will invoke the `use` function again, to change the language.
 
 <br>
 
-## Change language
+## 6. Change language
 
 To test this, create a custom `<select>` element to select a different language. On change, fire a `CustomEvent` called `anguage-changed`. Take a look at `Select.ts`. This element can be imported in any component, so let's import `LoginPage.ts` in `App.ts` and import the `<select>` element in `LoginPage.ts`.
 
@@ -241,7 +256,7 @@ export class LoginPage extends LitElement {
 
 <br>
 
-## Interpolate values
+## 7. Interpolate values
 
 From the docs:
 
@@ -285,7 +300,7 @@ But remember: `lit-translate`'s `get` function will get the translation only **o
 
 <br>
 
-### Interpolate values with HTML strings
+### 7.1 Interpolate values with HTML strings
 
 But what if you want html inside the translation? Like so:
 
@@ -306,7 +321,7 @@ But remember: `lit-translate`'s `get` function will get the translation only **o
 
 <br>
 
-### Interpolate dynamic values
+### 7.2 Interpolate dynamic values
 
 Why use this package if the interpolated values are not updated to the current selected language? To make this work:
 
