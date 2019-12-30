@@ -8,15 +8,15 @@ This documentation extends the original documentation with better type declarati
 
 ## Table of contents
 
-* [1. Getting started](#getting-started)
-* [2. Setting up lit-translate in TypeScript](#setting-up-lit-translate-in-typescript)
-* [3. Wait for strings to be loaded before displaying the component](#wait-for-strings-to-be-loaded-before-displaying-the-component)
-* [4. Getting translations](#getting-translations)
-* [5. Use the `translate` directive with `lit-html`](#use-the-translate-directive-with-lit-html)
-* [6. Change language](#change-language)
-* [7. Interpolate values](#interpolate-values)
-    * [#7.1 Interpolate values with HTML strings](#interpolate-values-with-html-strings)
-    * [#7.2 Interpolate dynamic values](#interpolate-dynamic-values)
+* [1. Getting started](#1-getting-started)
+* [2. Setting up lit-translate in TypeScript](#2-setting-up-lit-translate-in-typescript)
+* [3. Wait for strings to be loaded before displaying the component](#3-.wait-for-strings-to-be-loaded-before-displaying-the-component)
+* [4. Getting translations](#4-getting-translations)
+* [5. Use the `translate` directive with `lit-html`](#5-use-the-translate-directive-with-lit-html)
+* [6. Change language](#6-change-language)
+* [7. Interpolate values](#7-interpolate-values)
+    * [#7.1 Interpolate values with HTML strings](#71-interpolate-values-with-html-strings)
+    * [#7.2 Interpolate dynamic values](#72-interpolate-dynamic-values)
 
 
 <br>
