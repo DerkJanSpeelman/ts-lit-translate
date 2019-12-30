@@ -1,7 +1,7 @@
 import { css, CSSResult, customElement, html, LitElement, property, TemplateResult } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map';
 
-import { arrowdown } from '../icons/arrowdown';
+import { arrowdown } from './assets/icons/arrowdown';
 
 export interface SelectItem {
     value: string;

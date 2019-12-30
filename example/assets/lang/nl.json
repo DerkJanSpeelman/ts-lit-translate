@@ -1,0 +1,15 @@
+{
+    "en": "Engels",
+    "nl": "Nederlands",
+
+    "selected_language": "Geselecteerde taal",
+
+    "login_page": {
+        "sign_in": "Login",
+        "sign_in_intro": "Log in met je socialmedia-account of e-mailadres.",
+        "sign_in_with": "Log in met [[social]]",
+        "agreement": "Ik ga akkoord met [[terms_and_conditions]] en [[privacy_policies]].",
+    },
+    "terms_and_conditions": "Algemene Voorwaarden",
+    "privacy_policies": "Privacy beleid",
+}

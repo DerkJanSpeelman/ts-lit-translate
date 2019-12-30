@@ -1,0 +1,15 @@
+{
+    "en": "English",
+    "nl": "Dutch",
+
+    "selected_language": "Selected language",
+
+    "login_page": {
+        "sign_in": "Sign in",
+        "sign_in_intro": "Sign in with your social media account or email address.",
+        "sign_in_with": "Sign in with [[social]]",
+        "agreement": "I agree with all [[terms_and_conditions]] and [[privacy_policies]].",
+    },
+    "terms_and_conditions": "Terms and Conditions",
+    "privacy_policies": "Privacy Policies",
+}
