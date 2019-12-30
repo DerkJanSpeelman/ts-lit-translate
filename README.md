@@ -2,6 +2,8 @@
 
 https://github.com/andreasbm/lit-translate
 
+This documentation extends the original documentation with better type declarations and dynamic interpolation functionality.
+
 <br>
 
 ## Table of contents
