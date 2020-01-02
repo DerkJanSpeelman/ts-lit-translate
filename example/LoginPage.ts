@@ -22,11 +22,6 @@ export class LoginPage extends LitElement {
     @property({ type: String })
     public lang: string = 'en';
 
-    constructor() {
-        super();
-        document.addEventListener('language-has-changed', this.languageChanged);
-    }
-
     public render = (): TemplateResult => html`
         <article>
             <h1 class="large">${translate('login_page.sign_in')}</h1>
@@ -39,10 +34,6 @@ export class LoginPage extends LitElement {
         >
         </custom-select>
     `
-
-    private readonly languageChanged = (): void => {
-        this.performUpdate();
-    }
 }
 
 declare global {
