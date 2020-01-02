@@ -328,27 +328,8 @@ But remember: `lit-translate`'s `get` function will get the translation only **o
 Why use this package if the interpolated values are not updated to the current selected language? To make this work:
 
 ```js
-// App.ts
-private readonly changeLanguage = (e: any): void => {
-    if (e && e.detail) {
-        use(e.detail.value).then(() => {
-            document.dispatchEvent(new CustomEvent(`language-has-changed`));
-        }).catch((event: any) => {
-            console.trace();
-            console.warn(event);
-        });
-    }
-}
-```
-
-```js
-// LoginPage.ts
-constructor() {
-    super();
-    document.addEventListener('language-has-changed', this.languageChanged);
-}
-
-private readonly languageChanged = (): void => {
-    this.performUpdate();
-}
+${translate('signin.agreement', {
+    terms_and_conditions: (): string => `<a href="/terms-and-conditions">${litTranslate('terms_and_conditions')}</a>`,
+    privacy_policies: (): string => `<a href="/privacy-policies">${litTranslate('privacy_policies')}</a>`,
+})}
 ```
