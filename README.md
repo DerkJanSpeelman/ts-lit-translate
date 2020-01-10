@@ -329,7 +329,11 @@ Why use this package if the interpolated values are not updated to the current s
 
 ```js
 ${translate('signin.agreement', {
-    terms_and_conditions: (): string => `<a href="/terms-and-conditions">${litTranslate('terms_and_conditions')}</a>`,
-    privacy_policies: (): string => `<a href="/privacy-policies">${litTranslate('privacy_policies')}</a>`,
+    terms_and_conditions: (): string => `
+        <a href="/terms-and-conditions">${litTranslate('terms_and_conditions')}</a>
+    `,
+    privacy_policies: (): string => `
+        <a href="/privacy-policies">${litTranslate('privacy_policies')}</a>
+    `,
 })}
 ```
