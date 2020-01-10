@@ -23,14 +23,26 @@ export class App extends LitElement {
             loader: async (lang: LanguageIdentifier): Promise<Strings> => {
                 return fetch(`/assets/lang/${lang}.json`).then(
                     async (res: Response): Promise<Strings> => {
+                        this.langLoaded = true;
+
                         return res.json();
                     },
                 );
             },
+            interpolate: (text: string, values: Values | ValuesCallback | null): any => {
+                let res: string = text;
+
+                if (values !== null) {
+                    for (const [key, value] of Object.entries(extract(values))) {
+                        res = res.replace(`[[${key}]]`, String(extract(value)));
+                    }
+                }
+
+                return unsafeHTML(res);
+            },
         });
 
         await use('en');
-        this.langLoaded = true;
         super.connectedCallback();
     }
 
