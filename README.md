@@ -91,7 +91,7 @@ export class App extends LitElement {
 }
 ```
 
-**Please note** that I have ``return fetch(`/assets/lang/${lang}.json`).then(`` in my code example. With `use('en')` stated, this will search for `en.json` inside the `/assets/lang` folder.
+**Please note** that I have ``return fetch(`/assets/lang/${lang}.json`).then(`` in my code example. With `use('en')` stated, this will search for `en.json` inside the `/assets/lang` folder. Also, this will set the default AND fallback language to "en".
 
 <br>
 
@@ -325,7 +325,9 @@ But remember: `lit-translate`'s `get` function will get the translation only **o
 
 ### 7.2 Interpolate dynamic values
 
-Why use this package if the interpolated values are not updated to the current selected language? To make this work:
+Why use this package if the interpolated values are not updated to the current selected language? It is possible to have translation lines inside translation lines. The `[[translatable_key]]` placeholders accept strings, but also functions that return a string!
+
+To make this work:
 
 ```js
 ${translate('signin.agreement', {
