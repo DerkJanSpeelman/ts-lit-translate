@@ -204,7 +204,7 @@ This will invoke the `use` function again, to change the language.
 
 ## 6. Change language
 
-To test this, create a custom `<select>` element to select a different language. On change, fire a `CustomEvent` called `anguage-changed`. Take a look at `Select.ts`. This element can be imported in any component, so let's import `LoginPage.ts` in `App.ts` and import the `<select>` element in `LoginPage.ts`.
+To test this, create a custom `<select>` element to select a different language. On change, fire a `CustomEvent` called `language-changed`. Take a look at `Select.ts`. This element can be imported in any component, so let's import `LoginPage.ts` in `App.ts` and import the `<select>` element in `LoginPage.ts`.
 
 ```js
 // App.ts
